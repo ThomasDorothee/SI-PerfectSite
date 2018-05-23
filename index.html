@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,26 +9,32 @@
   <link rel="stylesheet" href="./src/styles/styles.css">
   <link rel="stylesheet" href="./src/styles/flexboxgrid.css">
 </head>
+
 <body>
 
   <!-- header -->
-  <header id="header" class="header">
-   <img src="./src/img/backgroudheader.png" alt="" class="header-img">
-   <div class="container">
-     <div class="row">
-        <nav class="header-nav col-xs-12">
-          <ul class="header-list">
-            <li class="header-elements"><a href="#" class="header-links">Articles</a></li>
-            <li class="header-elements"><a href="#" class="header-links">Top 100</a></li>
-            <li class="header-elements"><a href="#" class="header-links">Contact</a></li>
-          </ul>
-        </nav>
-     </div>
-   </div>
-  </header>
   <!-- header -->
 
   <!-- Magazine -->
+  <section class="magazine">
+    <div class="container">
+      <div class="row">
+        <div class="breaker"></div>
+        <div class="magazine-container col-xs-10">
+          <div class="magazine-cover col-md-5">
+            <img class="magazine-img" src="./src/img/magazine.png" alt="">
+          </div>
+          <div class="magazine-text col-xs-10 col-md-5">
+            300 pages de reportages sous forme de "carnets de voyages ».<br><br>
+            Des destinations testées et approuvées par nos journalistes (pas de mauvaises surprises à l'arrivée !)<br>
+            <br><br>
+            <a href="#">Voir un aperçu</a>
+          </div>
+        </div>
+        <div class="breaker"></div>
+      </div>
+    </div>
+  </section>
   <!-- Magazine -->
 
   <!-- Top100 -->
@@ -37,7 +44,8 @@
   <!-- Articles -->
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script src="./src/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="./src/script.js"></script>
 </body>
+
 </html>
