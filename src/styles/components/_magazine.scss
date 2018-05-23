@@ -14,6 +14,9 @@
     }
 
   }
+  &-titleBar{
+    display: none;
+  }
 
   &-container {
     margin: 0 auto;
@@ -88,7 +91,19 @@
   .magazine{
     height: 100vh;
     &-title{
+      margin-left: auto;
+      margin-right: auto;
           font-size: 30px;
+          text-align: left;
+          margin-bottom: 35px;
+    }
+    &-titleBar{
+      margin-top: -17px;
+      margin-left: 125px;
+      display: block;
+      width: 95px;
+      height: 5px;
+      background-color: #D7FCF4;
     }
     &-cover {
       margin: 20px auto -5px;
