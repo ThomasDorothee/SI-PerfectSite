@@ -1,44 +1,105 @@
 <?php
-
-function getHeader(): void
+function hetHeaderAdmin(): void
 {
-?>
-    <html lang="en">
+    ?>
+    <html>
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-        <style>li{
-                list-style:none;
-                margin:0 25px;
-            }
-            ul{
-                display:flex;
-                justify-content:space-arround;
-            }
-            nav{
-                border-bottom:2px solid black;
-            }
-            .article{
-                padding-bottom:4px;
-                border-bottom:2px solid black;
-            }</style>
+        <meta name="description" content="description de la page" />
+        <title>Une Année de voyages</title>
+        <link rel="stylesheet" href="./src/styles/styles.css">
+        <link rel="stylesheet" href="./src/styles/flexboxgrid.css">
+        <link rel="shortcut icon" href="./src/img/logo.png">
     </head>
+
     <body>
-    <nav>
-        <ul>
-            <li><a href="index.php">accueil</a></li>
-            <li><a href="admin.php">connexion</a></li>
-        </ul>
-    </nav>
-<?php
+
+    <header id="header" class="header">
+        <div class="header-container">
+            <div class="header-nav row center-xs center-sm center-md center-lg">
+                <nav class="col-xs-11 col-sm-10 col-md-8 col-lg-6">
+                    <ul class="header-list">
+                        <li class="header-elements"><a href="index.php" class="header-links">Accueil</a></li>
+                        <li class="header-elements"><a href="#" class="header-links">Magazine</a></li>
+                        <li class="header-elements"><a href="#" class="header-links">Top 100</a></li>
+                        <li class="header-elements"><a href="#" class="header-links">Articles</a></li>
+                        <li class="header-elements"><a href="#" class="header-links">Contact</a></li>
+                        <li class="header-elements"><a href="admin.php" class="header-links">Admin</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+    <?php
+}
+function getHeader(): void
+{
+    ?>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="description de la page" />
+        <title>Une Année de voyages</title>
+        <link rel="stylesheet" href="./src/styles/styles.css">
+        <link rel="stylesheet" href="./src/styles/flexboxgrid.css">
+        <link rel="shortcut icon" href="./src/img/logo.png">
+    </head>
+
+<body>
+
+    <header id="header" class="header">
+        <img src="./src/img/1.png" class="header-bg bg">
+        <img src="./src/img/2.png" class="header-bg bg">
+        <img src="./src/img/3.png" class="header-bg bg">
+        <img src="./src/img/4.png" class="header-bg bg">
+        <img src="./src/img/5.png" class="header-bg bg">
+
+        <div class="header-container">
+            <div class="header-nav row center-xs center-sm center-md center-lg">
+                <nav class="col-xs-11 col-sm-10 col-md-8 col-lg-6">
+                    <ul class="header-list">
+                        <li class="header-elements"><a href="index.php" class="header-links">Accueil</a></li>
+                        <li class="header-elements"><a href="#" class="header-links">Magazine</a></li>
+                        <li class="header-elements"><a href="#" class="header-links">Top 100</a></li>
+                        <li class="header-elements"><a href="#" class="header-links">Articles</a></li>
+                        <li class="header-elements"><a href="#" class="header-links">Contact</a></li>
+                        <li class="header-elements"><a href="admin.php" class="header-links">Admin</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-texts row center-xs center-sm start-md start-lg">
+                <div class="col-xs-11 col-sm-10 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+                    <div class="header-box">
+                        <h1 class="header-title" title="Une année de voyage">Une année de voyage</h1>
+                        <p class="header-text">Un mook collector, des fiches, pratiques, une application
+                            , un site...
+                        </p>
+                        <p class="header-text">Des voyages testés, des idées pour partir toute
+                            l'année!
+                        </p>
+                        <a class="header-more" href="#">Découvrir Cuba</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <?php
 }
 function getFooter(){
     ?>
-    </body>
-    </html>
-<?php
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="./src/script.js"></script>
+</body>
+
+</html>
+    <?php
 }
 function readIndex(PDO $pdo)
 {
@@ -56,14 +117,142 @@ function readIndex(PDO $pdo)
     $stmt->execute();
     errorNofound();
     ?>
-    <?php while(false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)):?>
+
+    <!-- Magazine -->
+    <section class="magazine">
+        <div class="container">
+            <div class="row">
+                <div class="breaker"></div>
+                <div class="magazine-title col-xs-12 col-md-10 col-lg-9">
+                    Découvrez notre <br><span>MOOK</span>
+                    <div class="magazine-titleBar"></div>
+                </div>
+                <div class="magazine-container col-xs-10">
+                    <div class="magazine-cover col-md-5">
+                        <img class="magazine-img" src="./src/img/magazine.png" alt="">
+                    </div>
+                    <div class="magazine-text col-xs-10 col-md-5">
+                        300 pages de reportages sous forme de "carnets de voyages".<br><br> Des destinations testées et approuvées par nos journalistes <span>(pas de mauvaises surprises à l'arrivée !)</span><br>
+                        <br><br>
+                        <a href="#">Voir un aperçu</a>
+                    </div>
+                </div>
+                <div class="breaker"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Magazine -->
+
+    <!-- Top100 -->
+    <section class="top">
+        <div class="container">
+            <div class="row">
+                <div class="top-title col-xs-12 col-md-10 col-lg-10">
+                    Retrouvez notre sélection <br><span>d'hôtels, de restaurants et <br>de spa</span>
+                    <div class="top-titleBar"></div>
+                </div>
+                <div class="top-container col-xs-12">
+                    <div class="top-items">
+                        <img src="./src/img/resto.jpg" alt="">
+                        <p>TOP 100<br>RESTAURANT</p>
+                        <a href="">Découvrir</a>
+                    </div>
+                    <div class="top-cut"></div>
+                    <div class="top-items">
+                        <img src="./src/img/hotel.png" alt="">
+                        <p>TOP 100<br>HÔTELS</p>
+                        <a href="">Découvrir</a>
+                    </div>
+                    <div class="top-cut"></div>
+                    <div class="top-items">
+                        <img src="./src/img/spa.jpeg" alt="">
+                        <p>TOP 100<br>SPA</p>
+                        <a href="">Découvrir</a>
+                    </div>
+                </div>
+                <div class="breaker"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Top100 -->
+
+    <!-- Articles -->
     <div class="article">
-        <h1><?= $row["title"]?></h1>
-        <p><?= reduireChaineCar($row["p"],40)?></p>
-        <a href="article.php?id=<?= $row["id"]?>">En savoir plus</a>
+        <h2 class="article-title">Derniers Articles</h2>
+        <div class="article-container">
+            <div class="row center-xs center-sm center-md center-lg">
+                <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
+                    <div class="article-flex">
+                        <div class="article-flex-filtre">
+                            <button class="article-flex-filtre-btnfiltre">Filtre</button>
+                            <button class="article-flex-filtre-btnfermer">Fermer</button>
+                            <img class="article-flex-filtre-btnfiltre-icon" src="./src/img/slider.png" alt="">
+                            <div class="article-flex-filtre-inputs">
+                                <label for="search" class="article-flex-filtre-inputs-search">Recherche</label>
+                                <input class="article-flex-filtre-inputs-search-input" type="text" name="search" placeholder="phallus">
+                                <label for="choisir" class="article-flex-filtre-inputs-choise">Choisir</label>
+                                <input class="article-flex-filtre-inputs-choise-checkbox" type="checkbox" name="category" value="restaurant"/> <label class="article-flex-filtre-inputs-choise-label" for="Restaurant">Restaurant</label><br />
+                                <input class="article-flex-filtre-inputs-choise-checkbox" type="checkbox" name="category" value="hotel"/> <label class="article-flex-filtre-inputs-choise-label" for="Hotel">Hôtel</label><br />
+                                <input class="article-flex-filtre-inputs-choise-checkbox" type="checkbox" name="category" value="spathalasso"/> <label class="article-flex-filtre-inputs-choise-label" for="spaThalassi">Spa / Thalasso</label><br />
+                                <input class="article-flex-filtre-inputs-choise-checkbox" type="checkbox" name="category" value="bonplan"/> <label class="article-flex-filtre-inputs-choise-label" for="BonPlan">Bon plan</label>
+                            </div>
+                        </div>
+                        <!-- ARTICLE 1 -->
+                        <div class="article-flex-aside">
+                            <div class="article-flex-aside-content content" data-category="restaurant" data-api="api-one">
+                                <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
+                                <p class="article-flex-aside-content-title">Location</p>
+                                <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
+                                <p class="article-flex-aside-content-text">Lorem ipsum dolor sit amet, consectetur dsdsdd...</p>
+                                <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
+                            </div>
+                            <!-- ARTICLE 2 -->
+                            <div class="article-flex-aside-content content" data-category="hotel">
+                                <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
+                                <p class="article-flex-aside-content-title">Location</p>
+                                <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
+                                <p class="article-flex-aside-content-text">Lorem ipsum dolor sit amet, consectetur dsdsdd...</p>
+                                <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
+                            </div>
+                            <!-- ARTICLE 3 -->
+                            <div class="article-flex-aside-content content" data-category="spathalasso" data-id="search">
+                                <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
+                                <p class="article-flex-aside-content-title">Location</p>
+                                <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
+                                <p class="article-flex-aside-content-text">Lorem ipsum dolor sit amet, consectetur dsdsdd...</p>
+                                <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
+                            </div>
+                            <!-- ARTICLE 4 -->
+                            <div class="article-flex-aside-content content" data-category="restaurant" data-id="search">
+                                <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
+                                <p class="article-flex-aside-content-title">Location</p>
+                                <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
+                                <p class="article-flex-aside-content-text">Lorem ipsum dolor sit amet, consectetur dsdsdd...</p>
+                                <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
+                            </div>
+
+                            <div class="article-flex-aside-content content" data-category="restaurant" data-id="search">
+                                <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
+                                <p class="article-flex-aside-content-title">Location</p>
+                                <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
+                                <p class="article-flex-aside-content-text">Lorem ipsum dolor sit amet, consectetur dsdsdd...</p>
+                                <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
+                            </div>
+
+                            <div class="article-flex-aside-content content" data-category="restaurant" data-id="search">
+                                <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
+                                <p class="article-flex-aside-content-title">Location</p>
+                                <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
+                                <p class="article-flex-aside-content-text">Lorem ipsum dolor sit amet, consectetur dsdsdd...</p>
+                                <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-<?php
-endwhile;
+    <?php
 }
 
 
@@ -89,8 +278,8 @@ WHERE
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     if(!isset($row['id'])){
-      header('Location: index.php?error=404');
-      exit;
+        header('Location: index.php?error=404');
+        exit;
     }
     ?>
 
@@ -99,7 +288,7 @@ WHERE
     <h3>PAR: <?= $row['author'] ?></h3>
     <h3>DATE: <?= $row['thedate'] ?></h3>
 
-<?php
+    <?php
 }
 
 function errorNofound()
@@ -458,7 +647,7 @@ function readAdmin(PDO $pdo)
         <a class="delete" onclick="return(confirm('Etes-vous sûr de vouloir supprimer cet article?'));"
            href="dodelete.php?id=<?=$row['id']?>">Supprimer</a>
     </div>
-<?php
+    <?php
 }
 
 
