@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="description de la page" />
   <title>Une Année de voyages</title>
   <link rel="stylesheet" href="./src/styles/styles.css">
   <link rel="stylesheet" href="./src/styles/flexboxgrid.css">
@@ -14,13 +15,40 @@
 <body>
 
   <!-- header -->
-<section id="header" class="header">
-<div class="goUp">
-  <a href="#header"><img src="./src/img/goUp.png" alt=""></a>
-</div>
+  <header id="header" class="header">
+    <img src="./src/img/1.png" class="header-bg bg">
+    <img src="./src/img/2.png" class="header-bg bg">
+    <img src="./src/img/3.png" class="header-bg bg">
+    <img src="./src/img/4.png" class="header-bg bg">
+    <img src="./src/img/5.png" class="header-bg bg">
 
-</section>
-  <!-- header -->
+   <div class="header-container">
+     <div class="header-nav row center-xs center-sm center-md center-lg">
+        <nav class="col-xs-11 col-sm-10 col-md-8 col-lg-6">
+          <ul class="header-list">
+            <li class="header-elements"><a href="#" class="header-links">Magazine</a></li>
+            <li class="header-elements"><a href="#" class="header-links">Top 100</a></li>
+            <li class="header-elements"><a href="#" class="header-links">Articles</a></li>
+            <li class="header-elements"><a href="#" class="header-links">Contact</a></li>
+          </ul>
+        </nav>
+     </div>
+     <div class="header-texts row center-xs center-sm start-md start-lg">
+       <div class="col-xs-11 col-sm-10 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+         <div class="header-box">
+            <h1 class="header-title" title="Une année de voyage">Une année de voyage</h1>
+            <p class="header-text">Un mook collector, des fiches, pratiques, une application
+            , un site...
+            </p>
+            <p class="header-text">Des voyages testés, des idées pour partir toute
+              l'année!
+            </p>
+            <a class="header-more" href="#">Découvrir Cuba</a>
+          </div>
+       </div>
+     </div>
+   </div>
+  </header>
 
   <!-- Magazine -->
   <section class="magazine">
@@ -81,6 +109,65 @@
   <!-- Top100 -->
 
   <!-- Articles -->
+  <div class="article">
+    <h2 class="article-title">Derniers Articles</h2>
+    <div class="article-container">
+      <div class="row center-xs center-sm center-md center-lg">
+         <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
+           <div class="article-flex">
+            <div class="article-flex-filtre">
+              <button class="article-flex-filtre-btnfiltre">Filtre</button>
+              <button class="article-flex-filtre-btnfermer">Fermer</button>
+              <img class="article-flex-filtre-btnfiltre-icon" src="./src/img/slider.png" alt="">
+              <div class="article-flex-filtre-inputs">
+                <label for="search" class="article-flex-filtre-inputs-search">Recherche</label>
+                <input class="article-flex-filtre-inputs-search-input" type="text" name="search" placeholder="phallus">
+                <label for="choisir" class="article-flex-filtre-inputs-choise">Choisir</label>
+                 <input class="article-flex-filtre-inputs-choise-checkbox" type="checkbox" value="Restaurant"/> <label class="article-flex-filtre-inputs-choise-label" for="ton_nom">Restaurant</label><br />
+                 <input class="article-flex-filtre-inputs-choise-checkbox" type="checkbox" value="Hotel"/> <label class="article-flex-filtre-inputs-choise-label" for="ton_nom">Hôtel</label><br />
+                 <input class="article-flex-filtre-inputs-choise-checkbox" type="checkbox" value="Spa / Thalasso"/> <label class="article-flex-filtre-inputs-choise-label" for="ton_nom">Spa / Thalasso</label><br />
+                 <input class="article-flex-filtre-inputs-choise-checkbox" type="checkbox" value="Bon plan"/> <label class="article-flex-filtre-inputs-choise-label" for="ton_nom">Bon plan</label>
+              </div>
+            </div>
+            <!-- ARTICLE 1 -->
+            <div class="article-flex-aside">
+              <div class="article-flex-aside-content">
+                <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
+                <p class="article-flex-aside-content-title">Location</p>
+                <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
+                <p class="article-flex-aside-content-text">Lorem ipsum dolor sit amet, consectetur dsdsdd...</p>
+                <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
+              </div>
+              <!-- ARTICLE 2 -->
+              <div class="article-flex-aside-content">
+                <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
+                <p class="article-flex-aside-content-title">Location</p>
+                <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
+                <p class="article-flex-aside-content-text">Lorem ipsum dolor sit amet, consectetur dsdsdd...</p>
+                <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
+              </div>
+              <!-- ARTICLE 3 -->
+              <div class="article-flex-aside-content">
+                <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
+                <p class="article-flex-aside-content-title">Location</p>
+                <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
+                <p class="article-flex-aside-content-text">Lorem ipsum dolor sit amet, consectetur dsdsdd...</p>
+                <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
+              </div>
+              <!-- ARTICLE 4 -->
+              <div class="article-flex-aside-content">
+                <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
+                <p class="article-flex-aside-content-title">Location</p>
+                <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
+                <p class="article-flex-aside-content-text">Lorem ipsum dolor sit amet, consectetur dsdsdd...</p>
+                <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   <!-- Articles -->
 
   <!-- Twitter -->
