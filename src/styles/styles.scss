@@ -9,4 +9,11 @@
 
 //Components
 @import "./components/_header";
+
 @import "./components/_article";
+@import "./components/_magazine";
+@import "./components/_top";
+
+body{
+  font-family: 'Futura';
+}

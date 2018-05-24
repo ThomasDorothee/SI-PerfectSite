@@ -1,0 +1,19 @@
+// Font
+$font-serif: 'AndradeRegular', 'Times new roman', serif;
+$font-ss: 'Nunito', 'Helvetica', sans-serif;
+
+// Color
+$mainColor: #000000;
+$secondaryColor: #000000;
+$thirdColor:rgba(251, 83, 83, 0.4);
+
+
+// Breakpoint
+$bp-tablet: 600px;
+$bp-desktop: 949px;
+$bp-desktop-large: 1200px;
+$bp-desktop-x-large: 1800px;
+
+html {
+  font-size: 62.5%;
+}

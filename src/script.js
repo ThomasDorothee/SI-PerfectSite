@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 carrousel();
 
 function carrousel(){
@@ -21,3 +22,11 @@ function carrousel(){
 
       }, 7000);
 }
+=======
+$(function() {
+  $('a[href*=#]').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+  });
+});
+>>>>>>> 1ab43f2e924780c49e3b5ea9aa6feaffe9fdc576
