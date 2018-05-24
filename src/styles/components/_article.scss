@@ -126,12 +126,13 @@
       @include for-size(tablet-landscape-up){
         display:flex;
         flex-wrap:wrap;
-        justify-content:center;
+        justify-content:flex-start;
         margin:0 auto;
       }
         @include for-size(big-desktop-up){
           max-width:1200px;
           width:80%;
+          height:732px;
         }
       &-content{
         &:not(:first-child){
@@ -207,5 +208,7 @@
       }
     }
   }
-
+}
+.hide{
+  display:none;
 }
