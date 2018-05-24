@@ -237,12 +237,13 @@ a {
         .article-flex-aside {
           display: flex;
           flex-wrap: wrap;
-          justify-content: center;
+          justify-content: flex-start;
           margin: 0 auto; } }
       @media (min-width: 1200px) {
         .article-flex-aside {
           max-width: 1200px;
-          width: 80%; } }
+          width: 80%;
+          height: 732px; } }
       .article-flex-aside-content {
         margin: 800px auto;
         width: 100%;
@@ -303,6 +304,9 @@ a {
             content: "";
             width: 84px;
             transition: all ease 1s; }
+
+.hide {
+  display: none; }
 
 .magazine {
   width: 100%;

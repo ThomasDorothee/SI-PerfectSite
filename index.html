@@ -121,17 +121,17 @@
               <img class="article-flex-filtre-btnfiltre-icon" src="./src/img/slider.png" alt="">
               <div class="article-flex-filtre-inputs">
                 <label for="search" class="article-flex-filtre-inputs-search">Recherche</label>
-                <input class="article-flex-filtre-inputs-search-input" type="text" name="search" placeholder="phallus">
+                <input class="article-flex-filtre-inputs-search-input" type="text" name="search" placeholder="Recherche">
                 <label for="choisir" class="article-flex-filtre-inputs-choise">Choisir</label>
-                 <input class="article-flex-filtre-inputs-choise-checkbox" type="checkbox" value="Restaurant"/> <label class="article-flex-filtre-inputs-choise-label" for="ton_nom">Restaurant</label><br />
-                 <input class="article-flex-filtre-inputs-choise-checkbox" type="checkbox" value="Hotel"/> <label class="article-flex-filtre-inputs-choise-label" for="ton_nom">Hôtel</label><br />
-                 <input class="article-flex-filtre-inputs-choise-checkbox" type="checkbox" value="Spa / Thalasso"/> <label class="article-flex-filtre-inputs-choise-label" for="ton_nom">Spa / Thalasso</label><br />
-                 <input class="article-flex-filtre-inputs-choise-checkbox" type="checkbox" value="Bon plan"/> <label class="article-flex-filtre-inputs-choise-label" for="ton_nom">Bon plan</label>
+                 <input class="article-flex-filtre-inputs-choise-checkbox" type="checkbox" name="category" value="restaurant"/> <label class="article-flex-filtre-inputs-choise-label" for="Restaurant">Restaurant</label><br />
+                 <input class="article-flex-filtre-inputs-choise-checkbox" type="checkbox" name="category" value="hotel"/> <label class="article-flex-filtre-inputs-choise-label" for="Hotel">Hôtel</label><br />
+                 <input class="article-flex-filtre-inputs-choise-checkbox" type="checkbox" name="category" value="spathalasso"/> <label class="article-flex-filtre-inputs-choise-label" for="spaThalassi">Spa / Thalasso</label><br />
+                 <input class="article-flex-filtre-inputs-choise-checkbox" type="checkbox" name="category" value="bonplan"/> <label class="article-flex-filtre-inputs-choise-label" for="BonPlan">Bon plan</label>
               </div>
             </div>
             <!-- ARTICLE 1 -->
             <div class="article-flex-aside">
-              <div class="article-flex-aside-content">
+              <div class="article-flex-aside-content content" data-category="restaurant" data-api="api-one">
                 <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
                 <p class="article-flex-aside-content-title">Location</p>
                 <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
@@ -139,7 +139,7 @@
                 <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
               </div>
               <!-- ARTICLE 2 -->
-              <div class="article-flex-aside-content">
+              <div class="article-flex-aside-content content" data-category="hotel">
                 <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
                 <p class="article-flex-aside-content-title">Location</p>
                 <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
@@ -147,7 +147,7 @@
                 <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
               </div>
               <!-- ARTICLE 3 -->
-              <div class="article-flex-aside-content">
+              <div class="article-flex-aside-content" data-category="spathalasso" data-id="search">
                 <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
                 <p class="article-flex-aside-content-title">Location</p>
                 <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
@@ -155,7 +155,23 @@
                 <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
               </div>
               <!-- ARTICLE 4 -->
-              <div class="article-flex-aside-content">
+              <div class="content article-flex-aside-content " data-category="restaurant" data-id="search">
+                <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
+                <p class="article-flex-aside-content-title">Location</p>
+                <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
+                <p class="article-flex-aside-content-text">Lorem ipsum dolor sit amet, consectetur dsdsdd...</p>
+                <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
+              </div>
+
+              <div class="content article-flex-aside-content" data-category="restaurant" data-id="search">
+                <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
+                <p class="article-flex-aside-content-title">Location</p>
+                <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
+                <p class="article-flex-aside-content-text">Lorem ipsum dolor sit amet, consectetur dsdsdd...</p>
+                <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
+              </div>
+
+              <div class="content article-flex-aside-content" data-category="restaurant" data-id="search">
                 <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
                 <p class="article-flex-aside-content-title">Location</p>
                 <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
