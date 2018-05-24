@@ -14,6 +14,11 @@
 
 <body>
 
+  <div class="goUp">
+    <a href="#header"><img src="./src/img/goUp.png" alt=""></a>
+  </div>
+
+
   <!-- header -->
   <header id="header" class="header">
     <img src="./src/img/1.png" class="header-bg bg">
@@ -24,12 +29,29 @@
 
    <div class="header-container">
      <div class="header-nav row center-xs center-sm center-md center-lg">
-        <nav class="col-xs-11 col-sm-10 col-md-8 col-lg-6">
+        <nav class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+          <div class="header-logo">
+            <img src="./src/img/logo.png" alt="">
+          </div>
+          <div class="header-burger">
+            <img src="./src/img/menu.png" alt="">
+          </div>
+          <div class="header-menuPhone">
+            <div class="header-menuBack">RETOUR</div>
+            <ul class="header-menuList">
+              <li class="header-menuElements"><a href="#magazine" class="header-menuLinks">Magazine</a></li>
+              <li class="header-menuElements"><a href="#top" class="header-menuLinks">Top 100</a></li>
+              <li class="header-menuElements"><a href="#article" class="header-menuLinks">Articles</a></li>
+              <li class="header-menuElements"><a href="#" class="header-menuLinks">À propos</a></li>
+              <li class="header-menuElements"><a href="#contact" class="header-menuLinks">Contact</a></li>
+            </ul>
+          </div>
           <ul class="header-list">
-            <li class="header-elements"><a href="#" class="header-links">Magazine</a></li>
-            <li class="header-elements"><a href="#" class="header-links">Top 100</a></li>
-            <li class="header-elements"><a href="#" class="header-links">Articles</a></li>
-            <li class="header-elements"><a href="#" class="header-links">Contact</a></li>
+            <li class="header-elements"><a href="#magazine" class="header-links">Magazine</a></li>
+            <li class="header-elements"><a href="#top" class="header-links">Top 100</a></li>
+            <li class="header-elements"><a href="#article" class="header-links">Articles</a></li>
+            <li class="header-elements"><a href="#" class="header-links">A propos</a></li>
+            <li class="header-elements"><a href="#contact" class="header-links">Contact</a></li>
           </ul>
         </nav>
      </div>
@@ -51,7 +73,7 @@
   </header>
 
   <!-- Magazine -->
-    <section class="magazine">
+    <section id="magazine" class="magazine">
       <div class="container">
         <div class="row">
           <div class="magazine-title col-xs-12 col-md-10 col-lg-9">
@@ -80,7 +102,7 @@
     <!-- Magazine -->
 
   <!-- Top100 -->
-  <section class="top">
+  <section  id="top" class="top">
     <div class="container">
       <div class="row">
         <div class="top-title col-xs-12 col-md-10 col-lg-10">
@@ -113,7 +135,7 @@
   <!-- Top100 -->
 
   <!-- Articles -->
-  <div class="article">
+  <div id="article"class="article">
     <h2 class="article-title">Derniers Articles</h2>
     <div class="article-container">
       <div class="row center-xs center-sm center-md center-lg">
@@ -197,6 +219,9 @@
   <!-- Partenaires -->
 
   <!-- Contact -->
+  <section id="contact" class="contact">
+
+  </section>
   <!-- Contact -->
 
   <!-- Footer -->

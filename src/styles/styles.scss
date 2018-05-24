@@ -17,3 +17,26 @@
 body{
   font-family: 'Futura';
 }
+
+.goUp{
+  margin-left: 85%;
+  margin-right: 2%;
+  margin-top: 90vh;
+  position: fixed;
+  z-index: 2222;
+  img{
+    width: 40px;
+    height: 40px;
+    transition: all 0.3;
+  }
+}
+@media (min-width: 550px){
+  .goUp{
+    margin-left: 90%;
+  }
+}
+@media (min-width: 850px){
+  .goUp{
+    margin-left: 94%;
+  }
+}
