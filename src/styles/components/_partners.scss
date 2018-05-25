@@ -1,0 +1,141 @@
+.partners {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+&-containt{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+&-containtLeft{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  &-title {
+    margin-top: 30px;
+    margin-left: 35px;
+    font-size: 21px;
+    font-weight: 200;
+      @include for-size(desktop-up){
+        margin-top: 80px;
+        margin-left: 70px;
+        font-size: 40px;
+      }
+
+    span {
+      font-size: 23px;
+      font-weight: bold;
+      @include for-size(desktop-up){
+        font-size: 42px;
+      }
+    }
+  }
+
+  &-textTitle {
+    margin-top: 70px;
+    margin-left: 35px;
+    font-size: 24px;
+    font-weight: bold;
+    @include for-size(desktop-up){
+      font-size: 34px;
+      margin-left: 190px;
+    }
+  }
+
+  &-text {
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-bottom: 20px;
+    font-size: 19px;
+    font-weight: 200;
+    @include for-size(desktop-up){
+      font-size: 28px;
+      margin-left: 190px;
+    }
+  }
+
+  &-cardContainer {
+    width: 250px;
+    height: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  &-card {
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 250px;
+    height: 420px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.6);
+    cursor: pointer;
+  }
+  &-cadre {
+    cursor: pointer;
+    margin: auto;
+    top: 80;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 240px;
+    height: 50px;
+  }
+  &-icons{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    @include for-size(desktop-up){
+      margin-left: 130px;
+      margin-right: 0;
+      margin-top: -160px;
+    }
+    img{
+      margin-bottom: 40px;
+    }
+  }
+  &-aero{
+    width: 225px;
+    height: 86px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 55px;
+    margin-top: 20px;
+    @include for-size(desktop-up){
+      width: 130px;
+      height: 60px;
+    }
+  }
+  &-fiji{
+    width: 225px;
+    height: 38px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 55px;
+    margin-top: 35px;
+    @include for-size(desktop-up){
+      width: 130px;
+      height: 20px;
+    }
+  }
+  &-nikon{
+    width: 189px;
+    height: 161px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 80px;
+    margin-top: 35px;
+    @include for-size(desktop-up){
+      width: 130px;
+      height: 110px;
+    }
+  }
+}
