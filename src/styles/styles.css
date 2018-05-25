@@ -403,9 +403,9 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    /* à 50%/50% du parent référent */
+    /* ├á 50%/50% du parent r├®f├®rent */
     transform: translate(-50%, -50%);
-    /* décalage de 50% de sa propre taille */
+    /* d├®calage de 50% de sa propre taille */
     text-transform: uppercase;
     text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); }
   .magazine-text {
@@ -626,10 +626,190 @@ a {
         margin-left: 190px; } }
   .partners-cardContainer {
     width: 250px;
-    height: 550px;
+     height: 550px;
     margin-left: auto;
     margin-right: auto;
     position: relative; }
+
+.admin {
+  font-family: 'Futura', sans-serif;
+  position: relative;
+  position: relative;
+  top: 140px;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 2px solid #161616;
+  border-left: 2px solid #161616;
+  border-right: 2px solid #161616;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; }
+  .admin-header {
+    position: fixed; }
+  .admin-add {
+    display: inline-block;
+    position: absolute;
+    text-transform: uppercase;
+    top: -50px;
+    border: 1px solid #8bcf54;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-family: arial, helvetica, sans-serif;
+    padding: 10px 40px 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #a9db80;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#a9db80), to(#96c56f));
+    background-image: -webkit-linear-gradient(top, #a9db80, #96c56f);
+    background-image: -moz-linear-gradient(top, #a9db80, #96c56f);
+    background-image: -ms-linear-gradient(top, #a9db80, #96c56f);
+    background-image: -o-linear-gradient(top, #a9db80, #96c56f);
+    background-image: linear-gradient(to bottom, #a9db80, #96c56f);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#a9db80, endColorstr=#96c56f); }
+    .admin-add:hover {
+      border: 1px solid #74bf36;
+      background-color: #8ed058;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#8ed058), to(#7bb64b));
+      background-image: -webkit-linear-gradient(top, #8ed058, #7bb64b);
+      background-image: -moz-linear-gradient(top, #8ed058, #7bb64b);
+      background-image: -ms-linear-gradient(top, #8ed058, #7bb64b);
+      background-image: -o-linear-gradient(top, #8ed058, #7bb64b);
+      background-image: linear-gradient(to bottom, #8ed058, #7bb64b);
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#8ed058, endColorstr=#7bb64b); }
+    .admin-add::after {
+      content: "+";
+      font-size: 42px;
+      font-weight: 400;
+      position: absolute;
+      top: -5px;
+      right: 7px; }
+  @media (min-width: 768px) {
+    .admin {
+      width: 98%; } }
+  @media (min-width: 992px) {
+    .admin {
+      max-width: 992px; } }
+  .admin-section {
+    display: flex; }
+    .admin-section:not(:first-child) {
+      border-bottom: 2px solid #161616; }
+    .admin-section:nth-child(odd) {
+      background: #95e5e5; }
+    .admin-section-items {
+      width: 50%;
+      text-align: center;
+      border-bottom: 2px solid #161616;
+      padding: 8px 0;
+      font-size: 24px;
+      font-weight: 700;
+      background: #84eded; }
+      .admin-section-items:first-child {
+        border-right: 1px solid #161616; }
+      .admin-section-items:last-child {
+        border-left: 1px solid #161616; }
+    .admin-section-articles {
+      display: flex;
+      width: 50%; }
+      .admin-section-articles-id {
+        width: 25%;
+        text-align: center;
+        padding: 16px 0;
+        border-right: 2px solid #161616; }
+      .admin-section-articles-title {
+        width: 75%;
+        padding: 16px 0;
+        text-align: center;
+        border-right: 1px solid #161616; }
+    .admin-section-commandes {
+      text-transform: uppercase;
+      display: flex;
+      width: 50%;
+      border-left: 1px solid #161616;
+      padding: 16px 0;
+      font-weight: 700; }
+      .admin-section-commandes-btn {
+        width: 33.33%;
+        text-align: center; }
+        .admin-section-commandes-btn-read {
+          color: white;
+          border-radius: 5px;
+          background: #00cc39;
+          padding: 8px 24px;
+          transition: all ease 0.4s; }
+          .admin-section-commandes-btn-read:hover {
+            background: green; }
+        .admin-section-commandes-btn-edit {
+          color: white;
+          border-radius: 5px;
+          background: orange;
+          padding: 8px 24px;
+          transition: all ease 0.4s; }
+          .admin-section-commandes-btn-edit:hover {
+            background: #db681c; }
+        .admin-section-commandes-btn-delete {
+          color: white;
+          border-radius: 5px;
+          background: #d6251b;
+          padding: 8px 24px;
+          transition: all ease 0.4s; }
+          .admin-section-commandes-btn-delete:hover {
+            background: red; }
+
+.add {
+  padding-top: 80px;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Futura', sans-serif; }
+  .add-form-label {
+    width: 140px;
+    display: inline-block;
+    background: gray;
+    padding: 8px;
+    margin: 2px;
+    text-align: right;
+    font-weight: 700; }
+  .add-form-input {
+    width: 250px;
+    padding: 7px;
+    margin: 2px;
+    margin-left: -7px; }
+  .add-form-text {
+    position: relative;
+    top: 40px;
+    left: -6px;
+    padding: 20px 0; }
+  .add-form-btns {
+    display: flex; }
+    .add-form-btns-add {
+      color: white;
+      width: 70%;
+      font-size: 18px;
+      text-align: center;
+      padding: 16px;
+      background: green;
+      font-family: 'Futura', sans-serif;
+      border: none;
+      cursor: pointer; }
+    .add-form-btns-back {
+      color: white;
+      width: 30%;
+      font-size: 18px;
+      text-align: center;
+      padding: 16px;
+      background: red;
+      font-family: 'Futura', sans-serif;
+      border: none;
+      cursor: pointer; }
+
+.ctrochiant {
+  padding: 48px 8px 48px 0; }
   .partners-card {
     margin: auto;
     top: 0;
@@ -769,6 +949,7 @@ a {
         display: block; } }
     .contact-right img {
       width: 100%; }
+
 
 body {
   font-family: 'Futura';
