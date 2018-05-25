@@ -132,6 +132,16 @@ function getHeader(): void
 }
 function getFooter(){
     ?>
+    <footer class="footer">
+      <p class="footer-text">Une Année De Voyages</p>
+      <ul class="footer-list">
+        <li>Home</li>
+        <li>Magazine</li>
+        <li>Équipe</li>
+        <li>Contact</li>
+      </ul>
+        <p class="footer-copy">UneAnnéeDeVoyages©2018</p>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="./src/script.js"></script>
 </body>
@@ -158,65 +168,70 @@ function readIndex(PDO $pdo)
     ?>
 
     <!-- Magazine -->
-    <section class="magazine">
-        <div class="container">
-            <div class="row">
-                <div class="breaker"></div>
-                <div class="magazine-title col-xs-12 col-md-10 col-lg-9">
-                    Découvrez notre <br><span>MOOK</span>
-                    <div class="magazine-titleBar"></div>
-                </div>
-                <div class="magazine-container col-xs-10">
-                    <div class="magazine-cover col-md-5">
-                        <img class="magazine-img" src="./src/img/magazine.png" alt="">
-                    </div>
-                    <div class="magazine-text col-xs-10 col-md-5">
-                        300 pages de reportages sous forme de "carnets de voyages".<br><br> Des destinations testées et approuvées par nos journalistes <span>(pas de mauvaises surprises à l'arrivée !)</span><br>
-                        <br><br>
-                        <a href="#">Voir un aperçu</a>
-                    </div>
-                </div>
-                <div class="breaker"></div>
-            </div>
+    <section id="magazine" class="magazine">
+      <div class="container">
+        <div class="row">
+          <div class="magazine-title col-xs-12 col-md-10 col-lg-9">
+            Découvrez notre <br><span>MOOK</span>
+            <div class="magazine-titleBar"></div>
+          </div>
+          <div class="magazine-cover col-lg-6">
+            <img class="magazine-img" src="./src/img/magazine.png" alt="">
+          </div>
+          <div class="magazine-magazine">MAGAZINE</div>
+          <div class="magazine-text col-lg-6">
+            <p class="magazine-descri">
+              300 pages de reportages sous forme de "carnets de voyages ».
+              <br><br><br> Des destinations testées et approuvées par nos journalistes (pas de mauvaise surprise à l'arrivée !) </p>
+            <br><br><br>
+            <a class="magazine-linkLG" href="#">Voir un aperçu</a>
+          </div>
+          <div class="magazine-link col-xs-12">
+            <a href="#">Voir un aperçu</a>
+          </div>
         </div>
+      </div>
     </section>
     <!-- Magazine -->
 
     <!-- Top100 -->
-    <section class="top">
-        <div class="container">
-            <div class="row">
-                <div class="top-title col-xs-12 col-md-10 col-lg-10">
-                    Retrouvez notre sélection <br><span>d'hôtels, de restaurants et <br>de spa</span>
-                    <div class="top-titleBar"></div>
-                </div>
-                <div class="top-container col-xs-12">
-                    <div class="top-items">
-                        <img src="./src/img/resto.jpg" alt="">
-                        <p>TOP 100<br>RESTAURANT</p>
-                        <a href="">Découvrir</a>
-                    </div>
-                    <div class="top-cut"></div>
-                    <div class="top-items">
-                        <img src="./src/img/hotel.png" alt="">
-                        <p>TOP 100<br>HÔTELS</p>
-                        <a href="">Découvrir</a>
-                    </div>
-                    <div class="top-cut"></div>
-                    <div class="top-items">
-                        <img src="./src/img/spa.jpeg" alt="">
-                        <p>TOP 100<br>SPA</p>
-                        <a href="">Découvrir</a>
-                    </div>
-                </div>
-                <div class="breaker"></div>
+    <section id="top" class="top">
+      <div class="container">
+        <div class="row">
+          <div class="top-title col-xs-12 col-md-10 col-lg-10">
+            Retrouvez notre sélection d'hôtels, de<br>restaurants et de spa
+          </div>
+          <div class="top-text col-xs-12 col-md-10 col-lg-10">
+            N’attendez plus, découvrez nos tops !
+          </div>
+          <div class="top-container col-xs-12">
+            <div class="top-items">
+              <img src="./src/img/resto.jpg" alt="">
+              <a href="">
+                <p href="">Découvrir notre top restaurant</p>
+              </a>
             </div>
+            <div class="top-items">
+              <img src="./src/img/hotel.png" alt="">
+              <a href="">
+                <p href="">Découvrir notre top hôtel</p>
+              </a>
+            </div>
+            <div class="top-items">
+              <img src="./src/img/spa.jpeg" alt="">
+              <a href="">
+                <p href="">Découvrir notre top spa</p>
+              </a>
+            </div>
+          </div>
+          <div class="breaker"></div>
         </div>
+      </div>
     </section>
     <!-- Top100 -->
 
     <!-- Articles -->
-    <div class="article">
+    <div id="article" class="article">
         <h2 class="article-title">Derniers Articles</h2>
         <div class="article-container">
             <div class="row center-xs center-sm center-md center-lg">
@@ -256,6 +271,64 @@ function readIndex(PDO $pdo)
             </div>
         </div>
     </div>
+    <!-- Partenaires -->
+    <section id="partners" class="partners">
+      <div class="partners-containt col-xs-10 col-md-10 col-lg-10 ">
+        <div class="partners-title">
+          <p>Découvrez<br><span>nos partenaires</span></p>
+        </div>
+      </div>
+      <div class="partners-containtLeft col-xs-10 col-md-10 col-lg-7">
+        <div class="partners-textTitle">
+          <p>News Air</p>
+        </div>
+        <div class="partners-text">
+          <p>
+            Le voyage commence à peine le pied posé dans l'avion. La meilleure façon de découvrir une destination consiste à voyager avec la Compagnie aérienne nationale. Chacune avec son style, sa culture, son identité s'applique à nous transmettre "l'esprit du
+            pays", dans les meilleures conditions de sécurité, de confort et d'accueil.
+          </p>
+        </div>
+      </div>
+      <div class="partners-cardContainer col-xs-10 col-md-9 col-lg-4 ">
+        <img class="partners-card" src="./src/img/card.png" alt="">
+        <img class="partners-cadre" src="./src/img/cadre.png" alt="">
+      </div>
+      <div class="partners-icons col-xs-10 col-lg-6">
+        <img class="partners-aero" src="./src/img/aero.png" alt="">
+        <img class="partners-fiji" src="./src/img/fiji.png" alt="">
+        <img class="partners-nikon" src="./src/img/nikon.png" alt="">
+      </div>
+    </section>
+    <!-- Partenaires -->
+    <!-- Twitter -->
+    <section id="twitter" class="twitter">
+      <div class="twitter-title">
+        <p>Actu Twitter</p>
+      </div>
+      <div class="twitter-cadre">
+        <img src="./src/img/twitter.png" alt="">
+      </div>
+    </section>
+    <!-- Twitter -->
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="contact-title col-xs-10 col-md-10 col-lg-10">
+        <p>NOUS CONTACTER</p>
+      </div>
+      <div class="contact-left col-xs-11 col-lg-6">
+       <p><span>Adresse : </span>32 RUE DES PEUPLIERS, 92100 Boulogne</p>
+       <p><span>Téléphone : </span>+33(0) 413 10 513</p>
+       <p><span>E-mail</span>redaction@uneanneedevoyages.com</p>
+       <p><span>Ouvert du Lundi au Vendredi de 10h à 18h</span></p>
+       <p><span>Redactrice en chef : </span><br>Judith Lossmann<br>+33(0) 6 88 31 61 37<br>judith.lossmann@uneanneedevoyages.com</p>
+       <p><span>Pigiste et secrétaire de rédaction : </span> Caroline M'zali<br>+33(0) 7 71 12 87 48<br>caroline.mzali@uneanneedevoyages.com</p>
+      </div>
+      <div class="contact-right col-xs-11 col-lg-6">
+        <img src="./src/img/formulaire.png" alt="">
+      </div>
+    </section>
+    <!-- Contact -->
+
     <?php
 }
 
@@ -266,14 +339,14 @@ function getArticle(PDO $pdo)
         header('Location: index.php?error=undefined');
         exit;
     }
-    $requete = "SELECT 
-  `id`, 
-  `title`, 
+    $requete = "SELECT
+  `id`,
+  `title`,
   `p`,
   `author`,
   `thedate`,
   `img`
-FROM 
+FROM
   `articles`
 WHERE
   `id` = :id
@@ -308,14 +381,14 @@ function errorNofound()
 
 function displayCrud(PDO $pdo) : void
 {
-    $req = "SELECT 
+    $req = "SELECT
               `id`,
               `title`,
-              `p`,  
-              `category`, 
+              `p`,
+              `category`,
               `author`,
-              `thedate` 
-            FROM 
+              `thedate`
+            FROM
               `articles`
             ;";
     $stmt = $pdo->prepare($req);
@@ -388,15 +461,15 @@ function update(PDO $pdo) : void
         header('Location: index.php?error=noidprovidededit');
         exit;
     }
-    $req = "SELECT 
+    $req = "SELECT
     `id`,
     `title`,
-    `p`,  
-    `category`, 
+    `p`,
+    `category`,
     `author`,
     `thedate`,
     `img`
-    FROM 
+    FROM
     `articles`
     WHERE
     `id` = :id

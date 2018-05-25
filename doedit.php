@@ -7,16 +7,16 @@ if (!isset($_POST['id']) || !isset($_POST['title']) || !isset($_POST['img'])) {
     header('Location: admin.php?error=nopostdataedit');
     exit;
 }
-$req = "UPDATE 
-  `articles` 
-SET 
-  `title` = :title, 
+$req = "UPDATE
+  `articles`
+SET
+  `title` = :title,
   `p` = :p,
-  `category` = :category, 
+  `category` = :category,
   `img` = :img,
-  `author` = :author, 
+  `author` = :author,
   `thedate` = :thedate
-WHERE 
+WHERE
 id = :id
 ;";
 $stmt = $pdo->prepare($req);
