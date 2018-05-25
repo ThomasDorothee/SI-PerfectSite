@@ -122,7 +122,7 @@ function getHeader(): void
                         <p class="header-text">Des voyages testés, des idées pour partir toute
                             l'année!
                         </p>
-                        <a class="header-more" href="#">Découvrir Cuba</a>
+                        <a class="header-more" href="#">Découvrir</a>
                     </div>
                 </div>
             </div>
