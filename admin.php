@@ -7,5 +7,5 @@ getHeaderAdmin();
 displayCrud($pdo);
 
 
-getFooter();
+getFooterAdmin();
 

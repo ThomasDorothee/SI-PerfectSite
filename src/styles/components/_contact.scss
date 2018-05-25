@@ -1,0 +1,55 @@
+.contact{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  &-title{
+    font-size: 23px;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    p{
+      @include for-size(desktop-up){
+        font-size: 32px;
+        margin-left: 90px;
+    }
+    }
+  }
+  &-left{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    p{
+      margin-top: 15px;
+      font-size: 15px;
+      font-weight: 200;
+      @include for-size(desktop-up){
+        margin-left: 50px;
+        margin-top: 40px;
+        font-size: 20px;
+      }
+      span{
+        font-weight: bold;
+        font-size: 17px;
+        @include for-size(desktop-up){
+          font-size: 23px;
+        }
+      }
+    }
+  }
+  &-right{
+    display: none;
+    @include for-size(desktop-up){
+      display: block;
+    }
+    width: 100%;
+    margin-top: -60px;
+    margin-left: auto;
+    margin-right: auto;
+    img{
+      width: 100%;
+    }
+  }
+}

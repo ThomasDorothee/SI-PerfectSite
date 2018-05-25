@@ -14,9 +14,15 @@
 @import "./components/_top";
 @import "./components/_admin";
 @import "./components/_add";
+@import "./components/_partners";
+@import "./components/_twitter";
+@import "./components/_contact";
+@import "./components/_footer";
+
 
 body{
   font-family: 'Futura';
+  width: 100%;
 }
 
 .goUp{
@@ -40,4 +46,13 @@ body{
   .goUp{
     margin-left: 94%;
   }
+}
+
+.breaker{
+  width: 80%;
+  height: 5px;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 44;
 }
