@@ -14,6 +14,8 @@
 @import "./components/_magazine";
 @import "./components/_top";
 @import "./components/_partners";
+@import "./components/_twitter";
+@import "./components/_contact";
 
 
 body{
@@ -42,4 +44,13 @@ body{
   .goUp{
     margin-left: 94%;
   }
+}
+
+.breaker{
+  width: 80%;
+  height: 5px;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 44;
 }
