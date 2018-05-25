@@ -104,3 +104,17 @@ $(function() {
     $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
   });
 });
+
+//NavResponsive
+
+var open= document.querySelector('.header-burger');
+var menu= document.querySelector('.header-menuPhone');
+var back= document.querySelector('.header-menuBack');
+
+open.addEventListener('click', function(){
+  menu.style.display ='block';
+});
+
+back.addEventListener('click', function(){
+  menu.style.display ='none';
+});

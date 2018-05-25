@@ -1,100 +1,188 @@
-
- .header{
+.header {
   width: 100%;
-  position:relative;
-  overflow:hidden;
-  font-family: 'Poppins', sans-serif;
-  &-bg{
-    position:absolute;
-    min-width:100%;
-    min-height:100%;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    z-index:-1;
-    opacity:1;
-    transition:all 2s ease !important;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Futura', sans-serif;
+
+  &-bg {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 1;
+    transition: all 2s ease !important;
   }
-  &-nav{
-  background:rgba(255,255,255,0.1);
+
+  &-nav {
+    background-color: #FFFFFF;
+    width: 102%;
+    height: 70px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.6);
+    position: fixed;
+    z-index: 3000;
   }
-  &-list{
+
+  &-logo {
+    margin-top: 14px;
+    float: left;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &-burger {
+    margin-top: 17px;
+    float: right;
+    cursor: pointer;
+
+    img {
+      width: 35px;
+      height: 35px;
+      @include for-size(tablet-landscape-up) {
+        display: none;
+      }
+    }
+  }
+
+  &-menuPhone {
+    display: none;
+    width: 110%;
+    height: 100vh;
+    position: absolute;
+    margin-left: -10%;
+    background-color: rgba(0,0,0,0.9);
+    transition: all 0.5s;
+    :active{
+
+    }
+  }
+
+  &-menuBack{
+    cursor: pointer;
+    color: white;
+    font-weight: 900;
+    margin-top: 25px;
+    margin-left: 70%;
+    transition: all 0.3s;
+    &:hover {
+      color: #D7FCF4;
+    }
+  }
+
+  &-menuList{
+    margin-top: 30%;
+    font-family: 'Futura', sans-serif;
+    font-weight: lighter;
+  }
+
+  &-menuElements{
+  margin-top: 30px;
+  }
+
+  &-menuLinks{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 35px;
+    &:hover {
+      color: #D7FCF4;
+    }
+  }
+
+  &-list {
+    display: none;
+    @include for-size(tablet-landscape-up) {
+      display: flex;
+      margin-top: 25px;
+      float: right;
+      font-family: 'Futura', sans-serif;
+      font-weight: lighter;
+    }
+    @include for-size(desktop-up) {
+      margin-top: 23px;
+    }
+  }
+
+  &-links {
+    color: #000000;
+    font-size: 18px;
+    margin-left: 15px;
+    @include for-size(desktop-up) {
+      font-size: 21px;
+      margin-left: 23px;
+    }
+
+    &:hover {
+      color: white;
+      text-shadow: -1px -1px 1px #4c4c4c, 1px -1px 1px #4c4c4c, -1px 1px 1px #4c4c4c, 1px 1px 1px #4c4c4c;
+      transition: all 0.5s ease;
+    }
+  }
+
+  &-texts {
     display: flex;
-    height:100px;
-    align-items:center;
-    margin:0 auto;
-    justify-content: space-between;
+    height: 80vh;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-title {
+    color: white;
+    font-weight: 900;
+    margin: 24px 0;
+    font-size: 30px;
+    text-align: center;
+    @include for-size(tablet-landscape-up) {
+      font-size: 40px;
+      text-align: left;
+    }
+  }
+
+  &-text {
+    font-family: 'Futura', sans-serif;
+    font-size: 24px;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 16px;
+    @include for-size(tablet-landscape-up) {
+      font-size: 28px;
+      text-align: left;
+    }
+  }
+
+  &-more {
+    background: white;
+    display: block;
+    text-align: center;
+    width: 200px;
+    margin: 50px auto;
+    padding: 16px 32px;
+    border-radius: 5px;
+    color: black;
     font-family: 'Poppins', sans-serif;
-    font-weight:900;
-    text-shadow:0px 0px 3px #727272;
-
-
-  }
-  &-links{
-    color:white;
-    font-size:18px;
-    @include for-size(tablet-landscape-up){
-      font-size:24px;
+    font-weight: 700;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    @include for-size(tablet-landscape-up) {
+      margin: 50px 0;
     }
-  }
-  &-texts{
-    display: flex;
-    height:89vh;
-    flex-direction:column;
-    align-items:center;
-  }
-  &-title{
-    color:white;
-    font-weight:900;
-    margin:24px 0;
-    font-size:30px;
-    text-align:center;
-    @include for-size(tablet-landscape-up){
-      font-size:40px;
-      text-align:left;
-    }
-  }
-  &-text{
-  font-family: 'Poppins', sans-serif;
-  font-size:24px;
-  color:white;
-  font-weight:400;
-  text-align:center;
-  margin-bottom:16px;
-  @include for-size(tablet-landscape-up){
-    font-size:28px;
-    text-align:left;
-  }
-  }
-  &-more{
-  background:white;
-  display:block;
-  text-align:center;
-  width:200px;
-  margin:50px auto;
-  padding:16px 32px;
-  border-radius:5px;
-  color:black;
-  font-family: 'Poppins', sans-serif;
-  font-weight:700;
-  transition:all .5s ease;
-  cursor:pointer;
-  @include for-size(tablet-landscape-up){
-    margin:50px 0;
-  }
-    &:hover{
-      color:white;
-      text-shadow:
-       -1px -1px 1px #4c4c4c,
-        1px -1px 1px #4c4c4c,
-       -1px 1px 1px #4c4c4c,
-        1px 1px 1px #4c4c4c;
-      transition:all .5s ease;
+
+    &:hover {
+      color: white;
+      text-shadow: -1px -1px 1px #4c4c4c, 1px -1px 1px #4c4c4c, -1px 1px 1px #4c4c4c, 1px 1px 1px #4c4c4c;
+      transition: all 0.5s ease;
     }
   }
 }
-.hidden{
-    opacity:0;
-    transition:all 1.5s ease !important;
+
+.hidden {
+  opacity: 0;
+  transition: all 1.5s ease !important;
 }

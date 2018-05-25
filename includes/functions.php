@@ -1,5 +1,5 @@
 <?php
-function hetHeaderAdmin(): void
+function getHeaderAdmin(): void
 {
     ?>
     <html>
@@ -14,24 +14,39 @@ function hetHeaderAdmin(): void
         <link rel="stylesheet" href="./src/styles/flexboxgrid.css">
         <link rel="shortcut icon" href="./src/img/logo.png">
     </head>
-
     <body>
-
-    <header id="header" class="header">
+    <!-- header -->
+    <header id="header">
         <div class="header-container">
             <div class="header-nav row center-xs center-sm center-md center-lg">
-                <nav class="col-xs-11 col-sm-10 col-md-8 col-lg-6">
+                <nav class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+                    <div class="header-logo">
+                        <a href="index.php"><img src="./src/img/logo.png" alt="logo accueil"></a>
+                    </div>
+                    <div class="header-burger">
+                        <img src="./src/img/menu.png" alt="menu">
+                    </div>
+                    <div class="header-menuPhone">
+                        <div class="header-menuBack">RETOUR</div>
+                        <ul class="header-menuList">
+                            <li class="header-menuElements"><a href="#magazine" class="header-menuLinks">Magazine</a></li>
+                            <li class="header-menuElements"><a href="#top" class="header-menuLinks">Top 100</a></li>
+                            <li class="header-menuElements"><a href="#article" class="header-menuLinks">Articles</a></li>
+                            <li class="header-menuElements"><a href="#" class="header-menuLinks">À propos</a></li>
+                            <li class="header-menuElements"><a href="#contact" class="header-menuLinks">Contact</a></li>
+                            <li class="header-menuElements"><a href="admin.php" class="header-menuLinks">Admin</a></li>
+                        </ul>
+                    </div>
                     <ul class="header-list">
-                        <li class="header-elements"><a href="index.php" class="header-links">Accueil</a></li>
-                        <li class="header-elements"><a href="#" class="header-links">Magazine</a></li>
-                        <li class="header-elements"><a href="#" class="header-links">Top 100</a></li>
-                        <li class="header-elements"><a href="#" class="header-links">Articles</a></li>
-                        <li class="header-elements"><a href="#" class="header-links">Contact</a></li>
+                        <li class="header-elements"><a href="#magazine" class="header-links">Magazine</a></li>
+                        <li class="header-elements"><a href="#top" class="header-links">Top 100</a></li>
+                        <li class="header-elements"><a href="#article" class="header-links">Articles</a></li>
+                        <li class="header-elements"><a href="#" class="header-links">À propos</a></li>
+                        <li class="header-elements"><a href="#contact" class="header-links">Contact</a></li>
                         <li class="header-elements"><a href="admin.php" class="header-links">Admin</a></li>
                     </ul>
                 </nav>
             </div>
-
         </div>
     </header>
     <?php
@@ -54,6 +69,12 @@ function getHeader(): void
 
 <body>
 
+    <div class="goUp">
+        <a href="#header"><img src="./src/img/goUp.png" alt=""></a>
+    </div>
+
+
+    <!-- header -->
     <header id="header" class="header">
         <img src="./src/img/1.png" class="header-bg bg">
         <img src="./src/img/2.png" class="header-bg bg">
@@ -63,13 +84,30 @@ function getHeader(): void
 
         <div class="header-container">
             <div class="header-nav row center-xs center-sm center-md center-lg">
-                <nav class="col-xs-11 col-sm-10 col-md-8 col-lg-6">
+                <nav class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+                    <div class="header-logo">
+                        <a href="index.php"><img src="./src/img/logo.png" alt="logo accueil"></a>
+                    </div>
+                    <div class="header-burger">
+                        <img src="./src/img/menu.png" alt="menu">
+                    </div>
+                    <div class="header-menuPhone">
+                        <div class="header-menuBack">RETOUR</div>
+                        <ul class="header-menuList">
+                            <li class="header-menuElements"><a href="#magazine" class="header-menuLinks">Magazine</a></li>
+                            <li class="header-menuElements"><a href="#top" class="header-menuLinks">Top 100</a></li>
+                            <li class="header-menuElements"><a href="#article" class="header-menuLinks">Articles</a></li>
+                            <li class="header-menuElements"><a href="#" class="header-menuLinks">À propos</a></li>
+                            <li class="header-menuElements"><a href="#contact" class="header-menuLinks">Contact</a></li>
+                            <li class="header-menuElements"><a href="admin.php" class="header-menuLinks">Admin</a></li>
+                        </ul>
+                    </div>
                     <ul class="header-list">
-                        <li class="header-elements"><a href="index.php" class="header-links">Accueil</a></li>
-                        <li class="header-elements"><a href="#" class="header-links">Magazine</a></li>
-                        <li class="header-elements"><a href="#" class="header-links">Top 100</a></li>
-                        <li class="header-elements"><a href="#" class="header-links">Articles</a></li>
-                        <li class="header-elements"><a href="#" class="header-links">Contact</a></li>
+                        <li class="header-elements"><a href="#magazine" class="header-links">Magazine</a></li>
+                        <li class="header-elements"><a href="#top" class="header-links">Top 100</a></li>
+                        <li class="header-elements"><a href="#article" class="header-links">Articles</a></li>
+                        <li class="header-elements"><a href="#" class="header-links">À propos</a></li>
+                        <li class="header-elements"><a href="#contact" class="header-links">Contact</a></li>
                         <li class="header-elements"><a href="admin.php" class="header-links">Admin</a></li>
                     </ul>
                 </nav>
@@ -107,6 +145,7 @@ function readIndex(PDO $pdo)
     `id`,
     `category`,
     `p`,
+    `img`,
     `author`,
     `thedate`,
     `title`
@@ -189,7 +228,7 @@ function readIndex(PDO $pdo)
                             <img class="article-flex-filtre-btnfiltre-icon" src="./src/img/slider.png" alt="">
                             <div class="article-flex-filtre-inputs">
                                 <label for="search" class="article-flex-filtre-inputs-search">Recherche</label>
-                                <input class="article-flex-filtre-inputs-search-input" type="text" name="search" placeholder="phallus">
+                                <input class="article-flex-filtre-inputs-search-input" type="text" name="search" placeholder="Recherche">
                                 <label for="choisir" class="article-flex-filtre-inputs-choise">Choisir</label>
                                 <input class="article-flex-filtre-inputs-choise-checkbox" type="checkbox" name="category" value="restaurant"/> <label class="article-flex-filtre-inputs-choise-label" for="Restaurant">Restaurant</label><br />
                                 <input class="article-flex-filtre-inputs-choise-checkbox" type="checkbox" name="category" value="hotel"/> <label class="article-flex-filtre-inputs-choise-label" for="Hotel">Hôtel</label><br />
@@ -198,55 +237,20 @@ function readIndex(PDO $pdo)
                             </div>
                         </div>
                         <!-- ARTICLE 1 -->
+                         <?php while (false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+
                         <div class="article-flex-aside">
-                            <div class="article-flex-aside-content content" data-category="restaurant" data-api="api-one">
-                                <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
-                                <p class="article-flex-aside-content-title">Location</p>
-                                <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
-                                <p class="article-flex-aside-content-text">Lorem ipsum dolor sit amet, consectetur dsdsdd...</p>
-                                <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
-                            </div>
-                            <!-- ARTICLE 2 -->
-                            <div class="article-flex-aside-content content" data-category="hotel">
-                                <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
-                                <p class="article-flex-aside-content-title">Location</p>
-                                <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
-                                <p class="article-flex-aside-content-text">Lorem ipsum dolor sit amet, consectetur dsdsdd...</p>
-                                <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
-                            </div>
-                            <!-- ARTICLE 3 -->
-                            <div class="article-flex-aside-content content" data-category="spathalasso" data-id="search">
-                                <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
-                                <p class="article-flex-aside-content-title">Location</p>
-                                <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
-                                <p class="article-flex-aside-content-text">Lorem ipsum dolor sit amet, consectetur dsdsdd...</p>
-                                <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
-                            </div>
-                            <!-- ARTICLE 4 -->
-                            <div class="article-flex-aside-content content" data-category="restaurant" data-id="search">
-                                <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
-                                <p class="article-flex-aside-content-title">Location</p>
-                                <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
-                                <p class="article-flex-aside-content-text">Lorem ipsum dolor sit amet, consectetur dsdsdd...</p>
-                                <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
-                            </div>
-
-                            <div class="article-flex-aside-content content" data-category="restaurant" data-id="search">
-                                <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
-                                <p class="article-flex-aside-content-title">Location</p>
-                                <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
-                                <p class="article-flex-aside-content-text">Lorem ipsum dolor sit amet, consectetur dsdsdd...</p>
-                                <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
-                            </div>
-
-                            <div class="article-flex-aside-content content" data-category="restaurant" data-id="search">
-                                <img class="article-flex-aside-content-img" src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg">
-                                <p class="article-flex-aside-content-title">Location</p>
-                                <p class="article-flex-aside-content-location">HOTEL MACHIN</p>
-                                <p class="article-flex-aside-content-text">Lorem ipsum dolor sit amet, consectetur dsdsdd...</p>
+                            <div class="article-flex-aside-content content" data-category="<?=$row['category']?>" data-api="api-one">
+                                <img class="article-flex-aside-content-img" src="<?=$row['img']?>">
+                                <p class="article-flex-aside-content-title"><?='#'.$row['category']?></p>
+                                <p class="article-flex-aside-content-location"><?=$row['title']?></p>
+                                <p class="article-flex-aside-content-text"><?= reduireChaineCar($row['p'],40)?></p>
                                 <a class="article-flex-aside-content-more" href="#">En Savoir +</a>
                             </div>
                         </div>
+                        <?php
+                        endwhile
+                        ?>
                     </div>
                 </div>
             </div>
@@ -267,7 +271,8 @@ function getArticle(PDO $pdo)
   `title`, 
   `p`,
   `author`,
-  `thedate`
+  `thedate`,
+  `img`
 FROM 
   `articles`
 WHERE
@@ -316,120 +321,27 @@ function displayCrud(PDO $pdo) : void
     $stmt = $pdo->prepare($req);
     $stmt->execute();
     ?>
-    <style>
-        .creat {
-            width: 200px !important;
-            height: 20px !important;
-            font-size: 32px;
-            margin-left: 5%;
-        }
-
-        .beta-wow {
-            width: 90%;
-            margin: 0 auto;
-        }
-
-        th {
-            width: 40%;
-            font-size: 24px;
-        }
-
-        th {
-            border-right: 2px solid gray;
-            background: rgb(0, 0, 0, 0.1);
-            background: rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        tr:first-child {
-            border-bottom: 2px solid gray;
-        }
-
-        tr:not(:first-child) {
-            border-bottom: 2px solid gray;
-            height: 50px !important;
-        }
-
-        td {
-            height: 20px !important;
-            border-right: 2px solid gray;
-            text-align: center;
-        }
-
-        th, td {
-            border-left: 2px solid gray;
-        }
-
-        .imgcrud {
-            width: auto;
-            height: 50px;
-        }
-
-        .read, .delete, .modified {
-            padding: 10px 25px;
-            border-radius: 2px;
-            font-size: 16px;
-            color: white;
-            border: none;
-            font-weight: bolder;
-        }
-
-        .read {
-            background: #25db1e;
-        }
-
-        .read:hover {
-            background: green;
-        }
-
-        .delete {
-            background: #ff3e1c;
-        }
-
-        .delete:hover {
-            background: red;
-        }
-
-        .modified {
-            background: #f99820;
-        }
-
-        .modified:hover {
-            background: orangered;
-        }
-
-        .read:hover, .delete:hover, .modified:hover, .read:focus, .delete:focus, .modified:focus {
-            text-decoration: none;
-            color: white;
-            transition: all .2s ease;
-        }
-    </style>
-    <div class="container-full theme-showcase" role="main">
-        <div class="jumbotron">
-            <h1>CRUD</h1>
-            <?php  errorNofound(); ?>
+    <a href="#" class="admin-add">ajouter un article</a>
+    <div class="admin">
+    <a href="add.php" class="admin-add">ajouter un article</a>
+        <div class="admin-section">
+            <div class="admin-section-items">Articles</div>
+            <div class="admin-section-items">Commande</div>
         </div>
-        <a class="creat" href="<?= "add.php" ?>">Créer un article</a>
-        <table class="beta-wow">
-            <tr>
-                <th colspan="2">Articles</th>
-                <th colspan="3">Commandes</th>
-            </tr>
-
-            <?php while (false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
-
-                <tr>
-                    <td><?= '<b>'.$row["title"].'</b>' ?></td>
-                    <td><?=reduireChaineCar($row['p'],15)?></td>
-                    <td style="border-right:none;"><a class="read" href="read.php?id=<?=$row['id'] ?>">Lire</a></td>
-                    <td><a class="modified" href="edit.php?id=<?= $row['id'] ?>">Modifier</a></td>
-                    <td><a class="delete" onclick="return(confirm('Etes-vous sûr de vouloir supprimer cet article?'));"
-                           href="dodelete.php?id=<?=$row['id']?>">Supprimer</a></td>
-                </tr>
+         <?php while (false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+        <div class="admin-section">
+            <div class="admin-section-articles">
+                <p class="admin-section-articles-id">ID N°<?=$row["id"]?></p>
+                <p class="admin-section-articles-title"> <?= '<b>'.$row["title"].'</b>' ?></p>
+            </div>
+            <div class="admin-section-commandes">
+                <div class="admin-section-commandes-btn" ><a class="admin-section-commandes-btn-read" href="read.php?id=<?=$row['id'] ?>">lire</a></div>
+                <div class="admin-section-commandes-btn" ><a class="admin-section-commandes-btn-edit" href="edit.php?id=<?= $row['id'] ?>">éditer</a></div>
+                <div class="admin-section-commandes-btn" ><a class="admin-section-commandes-btn-delete"onclick="return(confirm('Etes-vous sûr de vouloir supprimer cet article?'));"
+                href="dodelete.php?id=<?=$row['id']?>">supprimer</a></div>
+            </div>
+        </div>
             <?php endwhile; ?>
-        </table>
-    </div>
-
     <?php
 }
 
@@ -438,78 +350,32 @@ function add() : void
 {
     errorNofound();
     ?>
-    <style>
-        .add{
-            height:100vh;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            width:100%;
-        }
-
-        label{
-            width:175px;
-            text-align:right;
-        }
-        .addbtn{
-            background: dodgerblue;
-            padding: 10px 25px;
-            border: none;
-            color:white;
-            width:80%;
-            min-width:120px;
-        }
-        .addbtn:hover{
-            text-decoration:underline;
-        }
-        .input{
-            width:320px;
-        }
-        .retour{
-            background:red;
-            padding:10px 25px;
-            color:white;
-            border:none;
-            width:20%;
-            min-width:50px;
-        }
-        .retour:hover{
-            color:white;
-        }
-
-        .modifetback
-        {
-            display: flex;
-            width:100%;
-        }
-    </style>
     <div class="add">
-        <form class="form" action="doadd.php" method="post">
-            <label for="h1">Titre de l'article: </label> <input class="input" type="text" name="title"><br>
-            <label for="text">Article: </label> <textarea class="input" type="text" name="p" ></textarea><br>
-            <label for="title">Auteur: </label> <input class="input" type="text" name="author"><br>
-            <label for="img">Url de l'image: </label> <input class="input" type="text" name="img" placeholder="http//:"><br>
-            <label for="thedate">Date: </label><input type="date" name="thedate"></br>
-            <div>
-                <label for="category">Catégorie: </label>
-                <input type="radio" id="spanclass1"
-                       name="category" value="label-success">
-                <label for="category" class="input label label-success">success</label>
+        <form class="add-form" class="form" action="doadd.php" method="post">
+            <label class="add-form-label" for="title">Titre de l'article: </label> <input class="add-form-input" type="text" name="title"><br>
+            <label class="add-form-label ctrochiant" for="text">Article: </label> <textarea class="add-form-text" type="text" name="p" ></textarea><br>
+            <label class="add-form-label" for="author">Auteur: </label> <input class="add-form-input" type="text" name="author"><br>
+            <label class="add-form-label" for="img">Url de l'image: </label> <input class="add-form-input" type="text" name="img" placeholder="http//:"><br>
+            <label class="add-form-label" for="thedate">Date: </label><input type="date" name="thedate"></br>
+            <label for="category" class="add-form-label">Catégorie: </label>
+            <input type="radio" id="spanclass1"
+                   name="category" value="restaurant">
+            <label for="category">Restaurant</label>
 
-                <input type="radio" id="spanclass2"
-                       name="category" value="label-primary">
-                <label for="category" class="input label label-primary">primary</label>
+            <input type="radio" id="spanclass2"
+                   name="category" value="hotel">
+            <label for="category" class="input label label-primary">Hôtel</label>
 
-                <input type="radio" id="spanclass3"
-                       name="category" value="label-warning">
-                <label for="category" class="input label label-warning">warning</label>
+            <input type="radio" id="spanclass3"
+                   name="category" value="spathalasso">
+            <label for="category" class="input label label-warning">Spa / Thalasso</label>
 
-                <input type="radio" id="spanclass1"
-                       name="category" value="label-danger" >
-                <label for="category" class="input label label-danger">danger</label>
-            </div>
-            <div class="modifetback"><input class="addbtn" type="submit" name="adding" value="Ajouter"><a href="../includes/admin.php" class="retour">Retour</a></div>
+            <input type="radio" id="spanclass1"
+                   name="category" value="bonplan" >
+            <label for="category" class="input label label-danger">Bon plan</label>
+            <div class="add-form-btns"><input class="add-form-btns-add" type="submit" name="adding" value="Ajouter"><a href="admin.php" class="add-form-btns-back">Retour</a></div>
         </form>
+    </div>
     </div>
     <?php
 }
@@ -540,81 +406,34 @@ function update(PDO $pdo) : void
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     ?>
-    <style>
-        .add{
-            height:100vh;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            width:100%;
-        }
-
-        label{
-            width:175px;
-            text-align:right;
-        }
-        .addbtn{
-            background: dodgerblue;
-            padding: 10px 25px;
-            border: none;
-            color:white;
-            width:80%;
-            min-width:120px;
-        }
-        .addbtn:hover{
-            text-decoration:underline;
-        }
-        .input{
-            width:320px;
-        }
-        .retour{
-            background:red;
-            padding:10px 25px;
-            color:white;
-            border:none;
-            width:20%;
-            min-width:50px;
-        }
-        .retour:hover{
-            color:white;
-        }
-
-        .modifetback
-        {
-            display: flex;
-            width:100%;
-        }
-    </style>
     <div class="add">
-        <form class="form" action="doedit.php" method="post">
-            <input class="input" type="hidden" name="id" value="<?=$_GET['id']?>">
-            <label for="h1">Titre de l'article: </label> <input class="input" type="text" name="title" value="<?=$row['title']?>"><br>
-            <label for="text">Article: </label> <textarea class="input" type="text" name="p" ><?=$row['p']?></textarea><br>
-            <label for="title">Auteur: </label> <input class="input" type="text" name="author" value="<?=$row['author']?>"><br>
-            <label for="img">Url de l'image: </label> <input class="input" type="text" name="img" placeholder="http//:" value="<?=$row['img']?>"><br>
+        <form class="add-form" action="doedit.php" method="post">
+            <input class="input" type="hidden" name='id' value="<?=$_GET['id']?>">
+            <label class="add-form-label" for="title">Titre de l'article: </label> <input class="add-form-input" name='title' type="text" value="<?=$row['title']?>"><br>
+            <label class="add-form-label ctrochiant" for="text">Article: </label> <textarea class="add-form-text" name='p' ><?=$row['p']?></textarea><br>
+            <label class="add-form-label" for="author">Auteur: </label> <input class="add-form-input" type="text" name='author' value="<?=$row['author']?>"><br>
+            <label class="add-form-label" for="img">Url de l'image: </label> <input class="add-form-input" type="text" name='img' placeholder="http//:" value="<?=$row['img']?>"><br>
+            <label class="add-form-label" for="thedate">Date: </label><input type="date" name='thedate' value="<?=$row['thedate']?>"></br>
+            <label for="category" class="add-form-label">Catégorie: </label>
+            <input type="radio" id="spanclass1"
+                   name="category" value="restaurant" <?php if($row['category'] === 'restaurant'){ echo 'checked';}?>>
+            <label for="category">Restaurant</label>
 
-            <label for="thedate">Date: </label><input type="date" name="thedate" value="<?=$row['thedate']?>"></br>
-            <div>
-                <label for="categorylist">Catégorie: </label>
-                <input type="radio" id="spanclass1"
-                       name="category" value="label-success"  <?php if($row['category'] === 'label-success'){ echo 'checked';}?>>
-                <label for="un" class="input label label-success">success</label>
+            <input type="radio" id="spanclass2"
+                   name="category" value="hotel" <?php if($row['category'] === 'hotel'){ echo 'checked';}?>>
+            <label for="category" class="input label label-primary">Hôtel</label>
 
-                <input type="radio" id="spanclass2"
-                       name="category" value="label-primary" <?php if($row['category'] === 'label-primary'){ echo 'checked';}?>>
-                <label for="deux" class="input label label-primary">primary</label>
+            <input type="radio" id="spanclass3"
+                   name="category" value="spathalasso" <?php if($row['category'] === 'spathalasso'){ echo 'checked';}?>>
+            <label for="category" class="input label label-warning">Spa / Thalasso</label>
 
-                <input type="radio" id="spanclass3"
-                       name="category" value="label-warning" <?php if($row['category'] === 'label-warning'){ echo 'checked';}?>>
-                <label for="trois" class="input label label-warning">warning</label>
-
-                <input type="radio" id="spanclass1"
-                       name="category" value="label-danger" <?php if($row['category'] === 'label-danger'){ echo 'checked';}?>>
-                <label for="quatre" class="input label label-danger">danger</label>
-            </div>
-            <div class="modifetback"><input class="addbtn" type="submit" name="adding" value="Ajouter"><a href="admin.php" class="retour">Retour</a></div>
+            <input type="radio" id="spanclass1"
+                   name="category" value="bonplan" <?php if($row['category'] === 'bonplan'){ echo 'checked';}?>>
+            <label for="category" class="input label label-danger">Bon plan</label>
+            <div class="add-form-btns"><input class="add-form-btns-add" type="submit" name="adding" value="Modifier"><a href="admin.php" class="add-form-btns-back">Retour</a></div>
         </form>
     </div>
+
     <?php
 }
 
@@ -628,7 +447,8 @@ function readAdmin(PDO $pdo)
     `p`,
     `author`,
     `thedate`,
-    `title`
+    `title`,
+    `img`
     FROM
     `articles`
     WHERE
@@ -639,13 +459,59 @@ function readAdmin(PDO $pdo)
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     ?>
+    <style>
+        .articledit{
+            position:absolute;
+            display:flex;
+            width:30%;
+            height:30%;
+            left:50%;
+            top::50%;
+            flex-direction:column;
 
-    <div class="article">
+            justify-content:center;
+            background:white;
+            z-index:1;
+            transform:translate(-50%,50%);
+        }
+        .articledit h1{
+            font-weight:700;
+            display:inline-block;
+            text-align:left;
+            margin:0 auto;
+            width:50%;
+        }
+        .articledit p{
+            display:inline-block;
+            text-align:left;
+            margin:0 auto;
+            width:50%;
+        }
+        .xdmdr{
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            width:100%;
+            height:100%;
+            z-index:0;
+        }
+        .thommaassjpp{
+            width:30%;
+            margin:0 auto;
+            display:flex;
+            justify-content:space-between;
+        }
+    </style>
+    <img class="xdmdr" src="<?=$row["img"]?>" alt="">
+    <div class="articledit">
         <h1><?= $row["title"]?></h1>
         <p><?=$row["p"]?></p>
-        <a href="edit.php?id=<?=$row['id']?>">edit</a>
+        <div class="thommaassjpp"><a href="edit.php?id=<?=$row['id']?>">edit</a>
+
         <a class="delete" onclick="return(confirm('Etes-vous sûr de vouloir supprimer cet article?'));"
-           href="dodelete.php?id=<?=$row['id']?>">Supprimer</a>
+           href="dodelete.php?id=<?=$row['id']?>">Supprimer</a></div>
     </div>
     <?php
 }
