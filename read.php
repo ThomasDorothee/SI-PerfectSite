@@ -7,4 +7,4 @@ getHeaderAdmin();
 readAdmin($pdo);
 
 
-getFooter();
+getFooterAdmin();

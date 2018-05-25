@@ -589,8 +589,16 @@ function readAdmin(PDO $pdo)
     <?php
 }
 
+    function getFooterAdmin()
+    {
+        ?>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="./src/script.js"></script>
+        </body>
 
-
+        </html>
+        <?php
+    }
 function reduireChaineCar($chaine, $nb_car, $delim='...') {
     $length = $nb_car;
     if($nb_car<strlen($chaine)){

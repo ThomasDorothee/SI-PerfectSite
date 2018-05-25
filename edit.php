@@ -4,4 +4,4 @@ require_once "includes/functions.php";
 
 getHeaderAdmin();
 update($pdo);
-getFooter();
+getFooterAdmin();

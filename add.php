@@ -5,4 +5,4 @@ require_once "includes/functions.php";
 
 getHeaderAdmin();
 add();
-getFooter();
+getFooterAdmin();
