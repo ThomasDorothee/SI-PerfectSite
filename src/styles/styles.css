@@ -725,12 +725,50 @@ a {
       width: 100%; }
 
 .contact {
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; }
   .contact-title {
     font-size: 23px;
     font-weight: bold;
     margin-top: 70px;
-    margin-left: 50px; }
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px; }
+    @media (min-width: 992px) {
+      .contact-title p {
+        font-size: 32px;
+        margin-left: 90px; } }
+  .contact-left {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+    .contact-left p {
+      margin-top: 15px;
+      font-size: 15px;
+      font-weight: 200; }
+      @media (min-width: 992px) {
+        .contact-left p {
+          margin-left: 50px;
+          margin-top: 40px;
+          font-size: 20px; } }
+      .contact-left p span {
+        font-weight: bold;
+        font-size: 17px; }
+        @media (min-width: 992px) {
+          .contact-left p span {
+            font-size: 23px; } }
+  .contact-right {
+    display: none;
+    width: 100%;
+    margin-top: -60px;
+    margin-left: auto;
+    margin-right: auto; }
+    @media (min-width: 992px) {
+      .contact-right {
+        display: block; } }
+    .contact-right img {
+      width: 100%; }
 
 body {
   font-family: 'Futura';
