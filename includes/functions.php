@@ -133,7 +133,7 @@ function getHeader(): void
 function getFooter(){
     ?>
     <footer class="footer">
-      <p class="footer-text">Une Année De Voyages</p>
+      <div class="footer-break"></div>
       <ul class="footer-list">
         <li>Home</li>
         <li>Magazine</li>
